@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:layout_height="fill_parent" >
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/timerDisplayGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- TODO: Create a TextView for hours, minutes, and seconds
+             You can set the tools:text attribute to "00:00:00" so you can preview your design.
+             Set the width and height and size.
+             Customize the TextView yourself!
+             -->
+
+        <!-- TODO: Create a TextView for milliseconds
+             You can set the tools:text attribute to ".0" so you can preview your design.
+             Set the width and height and size.
+             Customize the TextView yourself!
+             -->
+
+        <TextView
+            android:id="@+id/front"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_00_00_00"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="36sp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_0"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/startResetGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <!-- TODO: Create a start button.
+             Set the width and height.
+             Set the text of the start button from the strings.xml file.
+             Set the background image from res/drawable folder, "@drawable/btn_start"
+             Customize the button yourself!
+             -->
+
+        <!-- TODO: Create a reset button.
+             Set the width and height.
+             Set the text of the reset button from the strings.xml file.
+             Set the background image from the res/drawable folder, "@drawable/btn_reset"
+             Customize the button yourself!
+             -->
+
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_start"
+            android:onClick="onStartClick"
+            android:text="@string/startText" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_reset"
+            android:onClick="onResetClick"
+            android:text="@string/resetText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stopGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <!-- TODO: Create a stop button.
+             Set the width and height!
+             Set the text of the stop button from the strings.xml file.
+             Set the background image from res/drawable folder,  "@drawable/btn_stop"
+             Note that it's invisible because the parent LinearLayout's visibility is "gone".
+             Customize the button yourself!
+             -->
+
+        <Button
+            android:id="@+id/stopBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_stop"
+            android:onClick="onStopClick"
+            android:text="@string/stopText" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hr"
+        app:srcCompat="@drawable/hline" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/cpre_388"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
